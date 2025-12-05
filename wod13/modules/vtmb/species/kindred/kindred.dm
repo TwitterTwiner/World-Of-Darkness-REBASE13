@@ -16,7 +16,13 @@
 	name = "Caitiff"
 	plural_form = "Caitiffes"
 	id = SPECIES_KINDRED
-	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
+	inherent_traits = list(
+		TRAIT_USES_SKINTONES,
+		TRAIT_NO_MIRROR_REFLECTION
+	)
+	examine_limb_id = SPECIES_HUMAN
+	inherent_biotypes = MOB_UNDEAD|MOB_HUMANOID
+	changesource_flags = MIRROR_BADMIN | MIRROR_PRIDE | WABBAJACK | ERT_SPAWN
 	mutantbrain = /obj/item/organ/brain/zombie/vampire
 	mutanttongue = /obj/item/organ/tongue/vampire
 	heatmod = 1

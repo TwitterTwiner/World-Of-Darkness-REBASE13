@@ -1,7 +1,6 @@
+// THIS IS A WOD13 UI FILE
 import { Button, Input, LabeledList, Section } from 'tgui-core/components';
-
-import { useBackend } from '../../backend';
-import { useLocalState } from '../../backend';
+import { useBackend, useLocalState } from '../../backend';
 import { Window } from '../../layouts';
 
 export const AtmLogin = (props) => {

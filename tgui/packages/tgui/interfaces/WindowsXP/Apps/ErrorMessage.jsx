@@ -1,3 +1,4 @@
+// THIS IS A WOD13 UI FILE
 import error_icon from '../../../assets/WindowsXP/897(32x32).png';
 
 export const ErrorMessage = (props) => {

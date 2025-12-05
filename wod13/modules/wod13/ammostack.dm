@@ -47,6 +47,7 @@
 	var/fire_stacks = 4
 
 /obj/projectile/beam/beam_rifle/vampire/vamp545mm/holy/on_hit(atom/target, blocked = FALSE, pierce_hit)
+	. = ..()
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
 		M.adjust_fire_stacks(fire_stacks)
@@ -85,6 +86,7 @@
 	var/fire_stacks = 4
 
 /obj/projectile/beam/beam_rifle/vampire/vamp556mm/incendiary/on_hit(atom/target, blocked = FALSE, pierce_hit)
+	. = ..()
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
 		M.adjust_fire_stacks(fire_stacks)

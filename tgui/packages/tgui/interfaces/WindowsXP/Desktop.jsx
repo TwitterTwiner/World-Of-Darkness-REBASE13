@@ -1,3 +1,4 @@
+// THIS IS A WOD13 UI FILE
 import windowsLogo from '../../assets/bg-windows.jpg';
 import { Footer } from './Footer';
 import { Icons } from './Icons';
