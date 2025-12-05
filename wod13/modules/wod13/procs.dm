@@ -427,15 +427,15 @@
 		return
 
 	while(health <= HEALTH_THRESHOLD_CRIT)
-		if(getStaminaLoss() > 0)
+		if(get_stamina_loss() > 0)
 			heal_overall_damage(stamina = 10)
-		else if(getOxyLoss() > 0)
-			adjustOxyLoss(-10)
-		else if(getBruteLoss() > 0)
+		else if(get_oxy_loss() > 0)
+			adjust_oxy_loss(-10)
+		else if(get_brute_loss() > 0)
 			heal_overall_damage(brute = 10)
-		else if(getToxLoss() > 0)
-			adjustToxLoss(-10)
-		else if(getFireLoss() > 0)
+		else if(get_tox_loss() > 0)
+			adjust_tox_loss(-10)
+		else if(get_fire_loss() > 0)
 			heal_overall_damage(burn = 10)
 
 	cure_fakedeath(source)

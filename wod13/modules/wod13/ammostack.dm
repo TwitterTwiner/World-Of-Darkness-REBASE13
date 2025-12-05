@@ -299,7 +299,7 @@
 //				adjust_gnosis(-1, M)
 //		else
 //			M.Stun(10)
-//			M.adjustBruteLoss(50, TRUE)
+//			M.adjust_brute_loss(50, TRUE)
 
 /obj/projectile/beam/beam_rifle/vampire/vamp556mm/silver
 	name = "5.56mm silver bullet"
@@ -316,7 +316,7 @@
 		else
 			M.Stun(1 SECONDS)
 			M.Immobilize(1 SECONDS)
-			M.adjustBruteLoss(50, TRUE)
+			M.adjust_brute_loss(50, TRUE)
 		if(!M.has_movespeed_modifier(/datum/movespeed_modifier/silver_slowdown))
 			M.add_movespeed_modifier(/datum/movespeed_modifier/silver_slowdown)
 			spawn(7 SECONDS)
@@ -335,7 +335,7 @@
 				adjust_gnosis(-1, M)
 		else
 			M.Stun(1 SECONDS)
-			M.adjustBruteLoss(25, TRUE)
+			M.adjust_brute_loss(25, TRUE)
 		if(!M.has_movespeed_modifier(/datum/movespeed_modifier/silver_slowdown))
 			M.add_movespeed_modifier(/datum/movespeed_modifier/silver_slowdown)
 			spawn(5 SECONDS)
@@ -354,7 +354,7 @@
 				adjust_gnosis(-1, M)
 		else
 			M.Stun(1 SECONDS)
-			M.adjustBruteLoss(30, TRUE)
+			M.adjust_brute_loss(30, TRUE)
 		if(!M.has_movespeed_modifier(/datum/movespeed_modifier/silver_slowdown))
 			M.add_movespeed_modifier(/datum/movespeed_modifier/silver_slowdown)
 			spawn(5 SECONDS)
@@ -376,7 +376,7 @@
 		else
 			M.Stun(2 SECONDS)
 			M.Immobilize(1 SECONDS)
-			M.adjustBruteLoss(40, TRUE)
+			M.adjust_brute_loss(40, TRUE)
 		if(!M.has_movespeed_modifier(/datum/movespeed_modifier/silver_slowdown))
 			M.add_movespeed_modifier(/datum/movespeed_modifier/silver_slowdown)
 			spawn(7 SECONDS)

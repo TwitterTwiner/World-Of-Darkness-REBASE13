@@ -99,8 +99,8 @@
 	. = ..()
 	var/live_ammo = get_ammo(FALSE, FALSE)
 	. += "[live_ammo ? live_ammo : "None"] of those are live rounds."
-	if (current_skin)
-		. += "It can be spun with <b>alt+click</b>"
+	//if (current_skin)
+	//	. += "It can be spun with <b>alt+click</b>"
 
 
 /obj/item/gun/ballistic/vampire/revolver/snub

@@ -76,7 +76,7 @@
 			L.bloodpool = min(L.maxbloodpool, L.bloodpool+2)
 			H.bloodpool = max(0, H.bloodpool-2)
 			L.adjustBruteLoss(-25)
-			L.adjustFireLoss(-25)
+			L.adjust_fire_loss(-25)
 		if(istype(H.pulling, /mob/living/carbon/human))
 			var/mob/living/carbon/human/BLOODBONDED = H.pulling
 			if(iscathayan(BLOODBONDED) || iszombie(BLOODBONDED))
@@ -258,7 +258,7 @@
 					if(length(BLOODBONDED.all_wounds))
 						var/datum/wound/W = pick(BLOODBONDED.all_wounds)
 						W.remove_wound()
-					BLOODBONDED.adjustFireLoss(-25, TRUE)
+					BLOODBONDED.adjust_fire_loss(-25, TRUE)
 					BLOODBONDED.bloodpool = min(BLOODBONDED.maxbloodpool, BLOODBONDED.bloodpool+2)
 					giving = FALSE
 
