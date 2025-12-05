@@ -570,7 +570,7 @@
 	playsound(src, 'wod13/modules/vtmb/sound/effects/radioclick.ogg', 30, FALSE)
 
 /obj/item/p25radio/click_alt(mob/user)
-	if(!user.can_perform_action(src, be_close = TRUE))
+	if(!user.can_perform_action(src))
 		return
 	powered = !powered
 	to_chat(user, "<span class='notice'>You turn the radio [powered ? "ON" : "OFF"].</span>")
@@ -634,7 +634,7 @@
 	return TRUE
 
 /obj/item/p25radio/police/click_alt(mob/user)
-	if(!user.can_perform_action(src, be_close = TRUE))
+	if(!user.can_perform_action(src))
 		return
 
 	var/list/choices = list(
@@ -644,7 +644,7 @@
 	)
 
 	var/choice = input(user, "Select an option:", "[src]") as null|anything in choices
-	if(!choice || !user.can_perform_action(src, be_close = TRUE))
+	if(!choice || !user.can_perform_action(src))
 		return
 
 	switch(choices[choice])

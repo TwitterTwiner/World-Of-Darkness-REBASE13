@@ -46,7 +46,7 @@
 	damage = 60
 	var/fire_stacks = 4
 
-/obj/projectile/beam/beam_rifle/vampire/vamp545mm/holy/on_hit(atom/target, blocked = FALSE)
+/obj/projectile/beam/beam_rifle/vampire/vamp545mm/holy/on_hit(atom/target, blocked = FALSE, pierce_hit)
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
 		M.adjust_fire_stacks(fire_stacks)
@@ -59,7 +59,7 @@
 	exposed_wound_bonus = 10
 	wound_bonus = 5
 
-/obj/projectile/beam/beam_rifle/vampire/vamp12g/on_hit(atom/target, blocked = FALSE)
+/obj/projectile/beam/beam_rifle/vampire/vamp12g/on_hit(atom/target, blocked = FALSE, pierce_hit)
 	. = ..()
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
@@ -73,7 +73,7 @@
 	exposed_wound_bonus = 5
 	wound_bonus = 0
 
-/obj/projectile/beam/beam_rifle/vampire/shotpellet/on_hit(atom/target, blocked = FALSE)
+/obj/projectile/beam/beam_rifle/vampire/shotpellet/on_hit(atom/target, blocked = FALSE, pierce_hit)
 	. = ..()
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
@@ -84,7 +84,7 @@
 	damage = 30
 	var/fire_stacks = 4
 
-/obj/projectile/beam/beam_rifle/vampire/vamp556mm/incendiary/on_hit(atom/target, blocked = FALSE)
+/obj/projectile/beam/beam_rifle/vampire/vamp556mm/incendiary/on_hit(atom/target, blocked = FALSE, pierce_hit)
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
 		M.adjust_fire_stacks(fire_stacks)
@@ -306,7 +306,7 @@
 	armour_penetration = 0
 	damage = 35
 
-/obj/projectile/beam/beam_rifle/vampire/vamp556mm/silver/on_hit(atom/target, blocked = FALSE)
+/obj/projectile/beam/beam_rifle/vampire/vamp556mm/silver/on_hit(atom/target, blocked = FALSE, pierce_hit)
 	. = ..()
 	if(iswerewolf(target) || isgarou(target))
 		var/mob/living/carbon/M = target
@@ -326,7 +326,7 @@
 	name = "9mm silver bullet"
 	damage = 23
 
-/obj/projectile/beam/beam_rifle/vampire/vamp9mm/silver/on_hit(atom/target, blocked = FALSE)
+/obj/projectile/beam/beam_rifle/vampire/vamp9mm/silver/on_hit(atom/target, blocked = FALSE, pierce_hit)
 	. = ..()
 	if(iswerewolf(target) || isgarou(target))
 		var/mob/living/carbon/M = target
@@ -345,7 +345,7 @@
 	name = ".45 ACP silver bullet"
 	damage = 25
 
-/obj/projectile/beam/beam_rifle/vampire/vamp45acp/silver/on_hit(atom/target, blocked = FALSE)
+/obj/projectile/beam/beam_rifle/vampire/vamp45acp/silver/on_hit(atom/target, blocked = FALSE, pierce_hit)
 	. = ..()
 	if(iswerewolf(target) || isgarou(target))
 		var/mob/living/carbon/M = target
@@ -366,7 +366,7 @@
 	armour_penetration = 0
 	icon_state = "s44"
 
-/obj/projectile/beam/beam_rifle/vampire/vamp44/silver/on_hit(atom/target, blocked = FALSE)
+/obj/projectile/beam/beam_rifle/vampire/vamp44/silver/on_hit(atom/target, blocked = FALSE, pierce_hit)
 	. = ..()
 	if(iswerewolf(target) || isgarou(target))
 		var/mob/living/carbon/M = target
