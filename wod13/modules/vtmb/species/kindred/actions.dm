@@ -75,7 +75,7 @@
 			var/mob/living/L = H.pulling
 			L.bloodpool = min(L.maxbloodpool, L.bloodpool+2)
 			H.bloodpool = max(0, H.bloodpool-2)
-			L.adjustBruteLoss(-25)
+			L.adjust_brute_loss(-25)
 			L.adjust_fire_loss(-25)
 		if(istype(H.pulling, /mob/living/carbon/human))
 			var/mob/living/carbon/human/BLOODBONDED = H.pulling
@@ -254,7 +254,7 @@
 					if(H.reagents)
 						if(length(H.reagents.reagent_list))
 							H.reagents.trans_to(BLOODBONDED, min(5, H.reagents.total_volume), transferred_by = H, methods = VAMPIRE)
-					BLOODBONDED.adjustBruteLoss(-25, TRUE)
+					BLOODBONDED.adjust_brute_loss(-25, TRUE)
 					if(length(BLOODBONDED.all_wounds))
 						var/datum/wound/W = pick(BLOODBONDED.all_wounds)
 						W.remove_wound()

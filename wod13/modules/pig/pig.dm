@@ -9,6 +9,10 @@
 	w_class = WEIGHT_CLASS_SMALL
 	var/cooldown = 0
 
+/obj/item/toy/rubberpig/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/drag_pickup)
+
 /obj/item/toy/rubberpig/attack_hand(mob/user)
 	var/hryuk = pick('sounds/pig1.ogg', 'sounds/pig2.ogg', 'sounds/pig3.ogg')
 	playsound(src, hryuk, 70, TRUE)
@@ -19,19 +23,3 @@
 		playsound(src, hryuk, 70, TRUE)
 		user.visible_message("<span class='notice'>[user] pushes the rubberpig.</span>", "<span class='notice'>You push the rubberpig.</span>")
 		cooldown = world.time
-
-/obj/item/toy/rubberpig/MouseDrop(atom/over_object)
-	. = ..()
-	var/mob/living/M = usr
-	if(!istype(M) || !(M.mobility_flags & MOBILITY_PICKUP))
-		return
-	if(Adjacent(usr))
-		if(over_object == M && loc != M)
-			M.put_in_hands(src)
-			to_chat(usr, "<span class='notice'>You pick up the rubberpig.</span>")
-		else if(istype(over_object, /atom/movable/screen/inventory/hand))
-			var/atom/movable/screen/inventory/hand/H = over_object
-			if(M.putItemFromInventoryInHandIfPossible(src, H.held_index))
-				to_chat(usr, "<span class='notice'>You pick up the rubberpig.</span>")
-	else
-		return

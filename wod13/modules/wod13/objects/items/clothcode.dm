@@ -529,8 +529,8 @@
 	wound = 10
 
 /obj/item/clothing/suit/hooded/heisenberg
-	name = "chemical vampire_costume"
-	desc = "A vampire_costume made for chemical protection."
+	name = "chemical costume"
+	desc = "A costume made for chemical protection."
 	icon = 'code/modules/wod13/clothing.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
@@ -554,7 +554,7 @@
 
 /obj/item/clothing/head/hooded/heisenberg_hood
 	name = "chemical hood"
-	desc = "A hood attached to a cchemical vampire_costume."
+	desc = "A hood attached to a chemical costume."
 	icon_state = "heisenberg_helm"
 	icon = 'code/modules/wod13/clothing.dmi'
 	worn_icon = 'code/modules/wod13/worn.dmi'

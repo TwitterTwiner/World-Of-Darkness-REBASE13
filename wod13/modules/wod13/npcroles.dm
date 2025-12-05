@@ -145,10 +145,10 @@
 	. = ..()
 	AddElement(/datum/element/simple_flying)
 
-/mob/living/simple_animal/hostile/beastmaster/rat/flying/UnarmedAttack(atom/A)
+/mob/living/simple_animal/hostile/beastmaster/rat/flying/UnarmedAttack(atom/attack_target, proximity_flag, list/modifiers)
 	. = ..()
-	if(ishuman(A))
-		var/mob/living/carbon/human/H = A
+	if(ishuman(attack_target))
+		var/mob/living/carbon/human/H = attack_target
 		if(H.bloodpool)
 			if(prob(5))
 				H.bloodpool = max(0, H.bloodpool-1)

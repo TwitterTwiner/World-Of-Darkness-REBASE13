@@ -552,7 +552,7 @@
 
 	return ITALICS | REDUCE_RANGE
 
-/obj/item/p25radio/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, list/message_mods = list())
+/obj/item/p25radio/Hear(atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, radio_freq_name, radio_freq_color, list/spans, list/message_mods, message_range)
 	. = ..()
 	if(!can_receive(speaker, message_mods))
 		return
@@ -576,7 +576,7 @@
 	to_chat(user, "<span class='notice'>You turn the radio [powered ? "ON" : "OFF"].</span>")
 	playsound(src, 'wod13/modules/vtmb/sound/effects/radioonn.ogg', 100, FALSE)
 
-/obj/item/p25radio/Moved()
+/obj/item/p25radio/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change = TRUE)
 	. = ..()
 	check_signal()
 

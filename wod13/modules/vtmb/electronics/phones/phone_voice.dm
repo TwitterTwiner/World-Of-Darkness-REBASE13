@@ -14,7 +14,19 @@ GLOBAL_LIST_INIT(zalgo_letters, list(
 	"̨T", "̨U", "̨V", "̨W", "̨X", "̨Y", "̨Z"
 ))
 
-/obj/phonevoice/say(message, bubble_type, list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null)
+/obj/phonevoice/say(
+	message,
+	bubble_type,
+	list/spans = list(),
+	sanitize = TRUE,
+	datum/language/language,
+	ignore_spam = FALSE,
+	forced,
+	filterproof = FALSE,
+	message_range = 7,
+	datum/saymode/saymode,
+	list/message_mods = list()
+)
 	if(message == "" || !message)
 		return
 	spans |= speech_span
